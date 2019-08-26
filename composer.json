@@ -1,14 +1,22 @@
-{
-  "name": "ced/bundleposition",
-  "description": "Magento 2 BundlePosition",
+ {
+  "name": "ced/magento-2-bundleposition-extension",
+  "description": "Magento 2 Bundle Product Listng Product extension",
   "require": {
-    "php": ">=5.4.0"
+    "php": "~5.5.0|~5.6.0|~7.0.0|~7.2.20"
   },
   "type": "magento2-module",
-  "version": "1.0",
+  "version": "1.1.1",
   "license": [
     "OSL-3.0",
     "AFL-3.0"
+  ],
+  "authors": [
+    {
+      "name": "CedCoss",
+      "email": "harshityadav@cedcoss.com",
+      "homepage": "https://www.Cedcoss.com",
+      "role": "Leader"
+    }
   ],
   "autoload": {
     "files": [
