@@ -1,9 +1,12 @@
  {
   "name": "ced/magento-2-bundleposition-extension",
-  "minimum-stability": "stable",
+  "minimum-stability":"dev",
   "description": "Bundle Product Listng Product",
   "type": "magento2-module",
   "version": "1.0.0",
+    "require": {
+    "php": ">=5.4.0"
+  },
   "license": [
     "OSL-3.0",
     "AFL-3.0"
