@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="bundleposition"
+             title="BundleModule"
+             module="Ced_BundlePosition"
+             resource="Ced_BundlePosition::bundleposition"
+             sortOrder="1"/>
+        <add id="bundleposition1"
+             title="BundlePositionGrid"
+             module="Ced_BundlePosition"
+             sortOrder="2"
+             action="bundleposition/index/index"
+             parent="bundleposition"
+             resource="Ced_BundlePosition::bundleposition"/>
+    </menu>
+</config>

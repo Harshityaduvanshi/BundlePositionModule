@@ -1,0 +1,126 @@
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">bundleposition_index_listing.bundleposition_index_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <spinner>bundleposition_columns</spinner>
+        <deps>
+            <dep>bundleposition_index_listing.bundleposition_index_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="bundleposition_index_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">selection_id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <dataProvider class="Ced\BundlePosition\Ui\DataProvider\BundlePosition" name="bundleposition_index_listing_data_source">
+            <settings>
+                <requestFieldName>selection_id</requestFieldName>
+                <primaryFieldName>selection_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <settings>
+            <sticky>true</sticky>
+        </settings>
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <filters name="listing_filters">
+            <filterSelect name="store_id" provider="${ $.parentName }">
+                <settings>
+                    <options class="Magento\Store\Ui\Component\Listing\Column\Store\Options"/>
+                    <caption translate="true">All Store Views</caption>
+                    <label translate="true">Store View</label>
+                    <dataScope>store_id</dataScope>
+                </settings>
+            </filterSelect>
+        </filters>
+        <massaction name="listing_massaction" component="Magento_Ui/js/grid/tree-massactions">
+            <action name="edit">
+                <settings>
+                    <callback>
+                        <target>editSelected</target>
+                        <provider>customer_listing.customer_listing.customer_columns_editor</provider>
+                    </callback>
+                    <type>edit</type>
+                    <label translate="true">Edit</label>
+                </settings>
+            </action>
+        </massaction>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="bundleposition_columns">
+        <settings>
+            <editorConfig>
+                <param name="clientConfig" xsi:type="array">
+                    <item name="saveUrl" xsi:type="url" path="bundleposition/index/inlineedit"/>
+                    <item name="validateBeforeSave" xsi:type="boolean">false</item>
+                </param>
+                <param name="indexField" xsi:type="string">selection_id</param>
+                <param name="enabled" xsi:type="boolean">true</param>
+                <param name="selectProvider" xsi:type="string">bundleposition_index_listing.bundleposition_index_listing.bundleposition_columns.ids</param>
+            </editorConfig>
+            <childDefaults>
+                <param name="fieldAction" xsi:type="array">
+                    <item name="provider" xsi:type="string">bundleposition_index_listing.bundleposition_index_listing.bundleposition_columns_editor</item>
+                    <item name="target" xsi:type="string">startEdit</item>
+                    <item name="params" xsi:type="array">
+                        <item name="0" xsi:type="string">${ $.$data.rowIndex }</item>
+                        <item name="1" xsi:type="boolean">true</item>
+                    </item>
+                </param>
+            </childDefaults>
+        </settings>
+        <selectionsColumn name="ids" sortOrder="0">
+            <settings>
+                <indexField>selection_id</indexField>
+            </settings>
+        </selectionsColumn>
+        <column name="parent_product_id" sortOrder="60">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">ParentProductId</label>
+            </settings>
+        </column>
+        <column name="product_id" sortOrder="60">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">ProductId</label>
+            </settings>
+        </column>
+        <column name="position" sortOrder="60">
+            <settings>
+                <filter>text</filter>
+                <editor>
+                    <editorType>text</editorType>
+                </editor>
+                <label translate="true">Position</label>
+            </settings>
+        </column>
+        <column name="selection_qty" sortOrder="60">
+            <settings>
+                <filter>text</filter>
+                <editor>
+                    <editorType>text</editorType>
+                </editor>
+                <label translate="true">SelectionQty</label>
+            </settings>
+        </column>
+        <column name="selection_price_value" sortOrder="60">
+            <settings>
+                <filter>text</filter>
+                <editor>
+                    <editorType>text</editorType>
+                </editor>
+                <label translate="true">SelectionPriceValue</label>
+            </settings>
+        </column>
+    </columns>
+</listing>
+
+
