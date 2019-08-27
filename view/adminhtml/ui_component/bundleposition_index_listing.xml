@@ -87,19 +87,19 @@
                 <label translate="true">ParentProductId</label>
             </settings>
         </column>
-        <column name="product_id" sortOrder="60">
+        <column name="product_id" sortOrder="61">
             <settings>
                 <filter>text</filter>
                 <label translate="true">ProductId</label>
             </settings>
         </column>
-         <column name="product_name" sortOrder="60">
+         <column name="product_name" sortOrder="62">
             <settings>
                 <filter>text</filter>
                 <label translate="true">ProductId</label>
             </settings>
         </column>
-        <column name="position" sortOrder="60">
+        <column name="position" sortOrder="63">
             <settings>
                 <filter>text</filter>
                 <editor>
@@ -108,7 +108,7 @@
                 <label translate="true">Position</label>
             </settings>
         </column>
-        <column name="selection_qty" sortOrder="60">
+        <column name="selection_qty" sortOrder="64">
             <settings>
                 <filter>text</filter>
                 <editor>
@@ -117,7 +117,7 @@
                 <label translate="true">SelectionQty</label>
             </settings>
         </column>
-        <column name="selection_price_value" sortOrder="60">
+        <column name="selection_price_value" sortOrder="65">
             <settings>
                 <filter>text</filter>
                 <editor>
