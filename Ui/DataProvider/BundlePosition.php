@@ -44,6 +44,11 @@ class BundlePosition extends AbstractDataProvider
         $this->collection = $collectionFactory->create();
         $this->addFieldStrategies = $addFieldStrategies;
         $this->addFilterStrategies = $addFilterStrategies;
+        $this->collection->getSelect()->joinLeft(
+            ["product_varchar" => $this->collection->getTable("catalog_product_entity_varchar")],
+            'product_varchar.entity_id = main_table.product_id AND product_varchar.attribute_id = 73',
+            []
+        )->columns(['product_name' => 'product_varchar.value']);
     }
     public function getData()
     {
