@@ -96,7 +96,7 @@
          <column name="product_name" sortOrder="62">
             <settings>
                 <filter>text</filter>
-                <label translate="true">ProductId</label>
+                <label translate="true">Name</label>
             </settings>
         </column>
         <column name="position" sortOrder="63">
