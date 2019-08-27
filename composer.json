@@ -1,5 +1,5 @@
  {
-  "name": "ced/magento-2-bundleposition-extension",
+  "name": "ced/bundleposition",
   "minimum-stability":"dev",
   "description": "Bundle Product Listng Product",
   "type": "magento2-module",
