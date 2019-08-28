@@ -49,6 +49,8 @@ class BundlePosition extends AbstractDataProvider
             'product_varchar.entity_id = main_table.product_id AND product_varchar.attribute_id = 73',
             []
         )->columns(['product_name' => 'product_varchar.value']);
+             $this->collection->addFilterToMap('product_name',
+            new \Zend_Db_Expr('CONCAT_WS(" ", product_varchar.value)'));
     }
     public function getData()
     {
